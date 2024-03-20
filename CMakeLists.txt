@@ -169,11 +169,6 @@ if(GUI_ENABLED)
     endif()
 endif()
 
-if(OPENGL_ENABLED AND NOT GUI_ENABLED)
-    message(STATUS "Disabling GUI will also disable OpenGL")
-    set(OPENGL_ENABLED OFF)
-endif()
-
 if(CGAL_FOUND)
     list(APPEND CGAL_LIBRARY ${CGAL_LIBRARIES})
     message(STATUS "Found CGAL")
